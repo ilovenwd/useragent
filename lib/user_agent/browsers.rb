@@ -3,6 +3,7 @@ require 'user_agent/browsers/gecko'
 require 'user_agent/browsers/internet_explorer'
 require 'user_agent/browsers/opera'
 require 'user_agent/browsers/webkit'
+require 'user_agent/browsers/titanium'
 
 class UserAgent
   module Browsers
@@ -13,7 +14,7 @@ class UserAgent
     }.freeze
 
     def self.all
-      [InternetExplorer, Webkit, Opera, Gecko]
+      [InternetExplorer, Webkit, Opera, Gecko, Titanium]
     end
 
     def self.extend(array)

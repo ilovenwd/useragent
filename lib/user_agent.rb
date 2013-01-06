@@ -14,6 +14,10 @@ class UserAgent
   DEFAULT_USER_AGENT = "Mozilla/4.0 (compatible)"
 
   def self.parse(string)
+    if string =~ /Titanium/
+      string = string.sub(' Titanium', '_Titanium')
+    end
+
     if string.nil? || string == ""
       string = DEFAULT_USER_AGENT
     end
